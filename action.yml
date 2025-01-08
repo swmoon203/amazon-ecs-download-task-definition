@@ -1,0 +1,17 @@
+name: 'Amazon ECS "Download Task Definition" Action for GitHub Actions'
+description: 'Downloads an Amazon ECS task definition JSON'
+branding:
+  icon: 'cloud'
+  color: 'orange'
+inputs:
+  task-definition:
+    description: 'ECS task definition'
+    required: true
+  output-file:
+    description: 'The path to the ECS task definition file [task-definition.json]'
+    required: false
+
+  
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
